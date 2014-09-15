@@ -12,7 +12,7 @@ public class TriangleOne
 
 	public TriangleOne()
 	{
-		word="";
+		word="gg";
 	}
 
 	public TriangleOne(String s)
