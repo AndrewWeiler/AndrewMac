@@ -18,30 +18,35 @@ public class Word {
 
 	}
 
+	public String toString() {
+		String word1 =  getFirstChar() + "\n" + getLastChar() + "\n"
+				+ getBackWards() + "\n" + word;
+		return word1;
+	}
+
 	public void setString(String s) {
 
 		word = s;
 	}
 
-	public void getFirstChar() {
-		System.out.println(word.substring(0, 1));
-		
-	}
-
-	public void getLastChar() {
-		System.out.println(word.substring(word.length() - 1, word.length()));
+	public String getFirstChar() {
+	
+		return (word.substring(0, 1));
 		 
-		
 	}
 
-	public void getBackWards() {
+	public String getLastChar() {
+		return (word.substring(word.length() - 1, word.length()));
+
+	}
+
+	public String getBackWards() {
 
 		for (int i = word.length(); i > 0; i--)
-			
-			back += word.substring(i - 1,i );
-			
-			
-		System.out.println(back);
+
+			back += word.substring(i - 1, i);
+
+		return back;
 	}
 
 	public void print() {

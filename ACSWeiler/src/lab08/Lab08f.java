@@ -14,10 +14,7 @@ public class Lab08f
 		Word andrew = new Word();
 		andrew.setString("andrew");//add test cases
 		
-		andrew.getFirstChar();
-		andrew.getLastChar();
-		andrew.getBackWards();
-	
+		System.out.println(andrew.toString());
 		
 		
 	}
