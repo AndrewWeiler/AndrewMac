@@ -1,4 +1,5 @@
 package lab08;
+
 //Name - Andrew Weiler
 //Date -
 //Class -
@@ -6,16 +7,15 @@ package lab08;
 
 import static java.lang.System.*;
 
-public class Lab08j
+public class Lab08k
 {
 	public static void main ( String[] args )
 	{
-		TwoToTen test = new TwoToTen("11101");//add test cases
+		GCD test = new GCD(5,25);
+		GCD test2 = new GCD(4, 400);
 		
-		System.out.println(test);
-		
-		
-		
+		System.out.println(test);//add test cases
+		System.out.println(test2);
 		
 	}
 }

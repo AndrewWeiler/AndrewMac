@@ -4,47 +4,33 @@ package lab08;
 //Class -
 //Lab  -
 
-import static java.lang.System.*;
-
-public class TwoToTen
-{
+public class TwoToTen {
 	private String binary;
+	public int num;
 
-	public TwoToTen()
-	{
-		binary ="";
+	public TwoToTen() {
 
-
-	}
-
-	public TwoToTen(String bin)
-	{
-		//binary = 	
+		int num = 0;
 
 	}
 
-	public void setTwo(String bin)
-	{
+	public TwoToTen(String bin) {
 
+		binary = bin;
+	}
 
+	public void setTwo(String bin) {
+
+		binary = bin;
 
 	}
 
-	public long getBaseTen( )
-	{
-		long ten=0;
-
-		Integer.parseInt(binary, 1101);
-
-
-
-
-
-		return ten;
+	public int getBaseTen() {
+		num = Integer.parseInt(binary, 2);
+		return num;
 	}
 
-	public String toString()
-	{
-		return "";
+	public String toString() {
+		return (binary+ " == " + getBaseTen()+ "" );
 	}
 }
