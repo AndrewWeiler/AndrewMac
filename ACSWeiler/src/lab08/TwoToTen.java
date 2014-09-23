@@ -19,7 +19,7 @@ public class TwoToTen
 
 	public TwoToTen(String bin)
 	{
-		binary = 	
+		//binary = 	
 
 	}
 
