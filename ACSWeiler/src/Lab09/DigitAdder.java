@@ -20,8 +20,21 @@ public class DigitAdder
 		return sum;
 	}
  
- public int findSum()
+ public int findSum(){
   int sum = 0;
- while 
+ int x = i;
+ while (x>0)
+ { 
+	sum += x%10;
+	x = x/10;
+	 
+}
+ return sum;
  
+}
+ public String toString()
+ { String print = "";
+ print = (findSum() + " is the sum of " + i);
+ return print;
+}
 }
