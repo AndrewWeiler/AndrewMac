@@ -7,55 +7,68 @@ package Lab10;
 
 import java.util.Scanner;
 import java.util.Random;
+
 import static java.lang.System.*;
 
 public class RockPaperScissors
 {
-	private String playChoice;
-	public int playChoiceInt;
+	
+	public String playChoice;
 	private int compChoice;
-
+	public String compString;
 	public RockPaperScissors()
 	{
 		playChoice = "";
-		compChoice = 0;
-		playChoiceInt = 0;
-
+		{compChoice = (int) (2*Math.random());
+		if(compChoice == 0)
+			compString = "R";
+		if(compChoice == 1)
+			compString = "P";
+		else
+			compString = "S";}
 	}
 
 	public RockPaperScissors(String player)
 	{
 		playChoice =player;
-		if(player.equals("R"))
-			playChoiceInt = 0;
-		if(player.equals("P"))
-			playChoiceInt = 1;
-		if(player.equals("S"))
-			playChoiceInt = 2;
-		compChoice = (int) (2*Math.random());
+		
+		{compChoice = (int) (2*Math.random());
+		if(compChoice == 0)
+			compString = "R";
+		if(compChoice == 1)
+			compString = "P";
+		else
+			compString = "S";}
 	}
 
 	public void setPlayers(String player)
 	{
-		if(player.equals("R"))
-			playChoiceInt = 0;
-		if(player.equals("P"))
-			playChoiceInt = 1;
-		if(player.equals("S"))
-			playChoiceInt = 2;
-		compChoice = (int) (2*Math.random());
-		
+		playChoice =player;
+		{compChoice = (int) (2*Math.random());
+		if(compChoice == 0)
+			compString = "R";
+		if(compChoice == 1)
+			compString = "P";
+		else
+			compString = "S";}
 	}
 
 	public String determineWinner()
-	{	int i = compChoice;
+	{	String comp = compString;
+		String playerIn = "";
+		String winner = "";
+		playerIn = playChoice;
+		out.println("Your choice was " +playerIn);
+		out.println("The computer picked " + comp);
 		
-		String winner="";
-		out.println(i);
-		
-
-
-
+		if(playerIn.equals("R")&&comp.equals("S"))
+			return "Player "+ playerIn;
+		if(playerIn.equals("P")&&comp.equals("R"))
+			return "Player "+ playerIn;
+		if(playerIn.equals("S")&&comp.equals("P"))
+			return "Player "+ playerIn;
+		else 
+		winner = "Computer " + comp;
 
 
 		return winner;
@@ -63,7 +76,7 @@ public class RockPaperScissors
 
 	public String toString()
 	{
-		String output=( determineWinner()+"");
+		String output=("The winner was " + determineWinner()+ " beats " + compString);
 
 		return output;
 	}

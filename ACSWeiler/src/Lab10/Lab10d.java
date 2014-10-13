@@ -13,11 +13,10 @@ public class Lab10d
 	public static void main(String args[])
 	{
 		Scanner scan = new Scanner(System.in);
-		char response;
-		
+		String question = "";
 		//add in a do while loop after you get the basics up and running
 		
-			String player = "";
+		do{	String player = "";
 		
 			out.print("type in your prompt [R,P,S] :: ");
 			
@@ -25,7 +24,10 @@ public class Lab10d
 		
 			RockPaperScissors game = new RockPaperScissors(player);
 		out.println(game);
-		
+		out.println("Do you want to play again?(y/n)");
+		question = scan.nextLine();
+		}
+		while( question.equalsIgnoreCase("y"));
 	}
 }
 
