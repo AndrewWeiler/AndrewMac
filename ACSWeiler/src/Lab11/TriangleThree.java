@@ -6,7 +6,7 @@ package Lab11;
 //Lab  -
 
 import static java.lang.System.*;
-import static java.lang.System.*;
+
 
 
 
