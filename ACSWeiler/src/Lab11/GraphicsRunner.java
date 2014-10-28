@@ -5,6 +5,11 @@ package Lab11;
 //Class - 
 //Lab  -
 
+//Name Andrew Weiler
+//Date -
+//Class - 
+//Lab  -
+
 import javax.swing.JFrame;
 
 public class GraphicsRunner extends JFrame

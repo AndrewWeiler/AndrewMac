@@ -1,5 +1,4 @@
 package Lab11;
-
 //Name - Andrew Weiler
 //Date -
 //Class - 
@@ -29,12 +28,14 @@ class ColoredBoxes extends Canvas
 
 	public void drawBoxes(Graphics window)
 	{
-		for(int i = 0; i<4;i++)
-			for(int j = 0; j<4; j++)
+		for(int row = 100; row<250;row+=15){
+			for(int col = 100; col<250; col+=14){
 			   window.setColor(Color.blue);
-				window.drawBox())
-		
-		//nested loops to draw the pretty boxes
+					window.drawRect( row, col, 10, 10);
+					window.fillRect(row,  col,  10,  10);
+					}
+			}
+					//nested loops to draw the pretty boxes
 
 
 
