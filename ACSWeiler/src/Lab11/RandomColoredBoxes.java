@@ -6,6 +6,7 @@ package Lab11;
 //Lab  -
 
 import java.awt.Graphics;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.util.Random;
@@ -49,8 +50,8 @@ public class RandomColoredBoxes extends JPanel
 
 	public void drawBoxes(Graphics window)
 	{
-		for(int row = 100; row<250;row+=15){
-			for(int col = 100; col<250; col+=14){
+		for(int row = 50; row<700;row+=15){
+			for(int col = 100; col<500; col+=14){
 				
 		
 					window.fillRect(row,  col,  10,  10);
