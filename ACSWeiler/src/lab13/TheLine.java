@@ -22,19 +22,15 @@ public class TheLine
 public int getLargest()
 	{	Scanner scan = new Scanner(line);
 		int largest = Integer.MIN_VALUE;
-		int max = 0;
+		
 		while(scan.hasNext()){
-			if(scan.nextInt()>largest)
-				max = scan.nextInt();
+			int loc = scan.nextInt();
+			if(loc>largest)
+				largest = loc;
 		}
 		
 
-
-
-
-
-
-		return max;
+		return largest;
 	}
 
 	public String toString( )
