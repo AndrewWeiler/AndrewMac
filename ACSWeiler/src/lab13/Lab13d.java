@@ -17,7 +17,7 @@ public class Lab13d
 {
 	public static void main( String args[] ) throws IOException
 	{
-		Scanner file = new Scanner(new File("data/lab13d.dat"));
+		Scanner file = new Scanner(new File("data/lab14grades.dat"));
 		int size = file.nextInt();
 		file.nextLine();
 		for(int i=0; i<size; i++)
