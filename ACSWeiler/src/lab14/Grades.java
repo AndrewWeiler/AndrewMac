@@ -12,21 +12,21 @@ public class Grades
 {
 	int num = 0;
 	String grades = ""; //add a double[] array instance variable
-	double[] gradeArray;
+	public double[] gradeArray;
+	
 	public Grades(int a, String b){
 		num = a;
 		grades = b;
 	}
 
-	public double[] setArray(){
-		double[] gradeArray = new double[num];
+	public void setArray(){
+		gradeArray = new double[num];
 		int count =0;
 		Scanner scan2 = new Scanner(grades);
 		while(scan2.hasNext()){
 			gradeArray[count]=  scan2.nextInt();	
 		count++;}
 		
-		return gradeArray;
 	}
 	private double getSum(){
 		double sum = 0.0;
