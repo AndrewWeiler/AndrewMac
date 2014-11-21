@@ -17,21 +17,21 @@ public class Grades
 	public Grades(int a, String b){
 		num = a;
 		grades = b;
+		gradeArray = new double[a];
 	}
 
 	public void setArray(){
-		gradeArray = new double[num];
 		int count =0;
 		Scanner scan2 = new Scanner(grades);
-		while(scan2.hasNext()){
-			gradeArray[count]=  scan2.nextInt();	
+		while(scan2.hasNextDouble()){
+			gradeArray[count]=  scan2.nextDouble();	
 		count++;}
 		
 	}
 	private double getSum(){
 		double sum = 0.0;
 			Scanner scan = new Scanner(grades);
-			while(scan.hasNext()){
+			while(scan.hasNextDouble()){
 				sum +=  scan.nextDouble();	
 			}
 			return sum;
@@ -48,6 +48,7 @@ public class Grades
 		int count = 0;
 		for(int i = 0; i<gradeArray.length-1; i++){
 			output += ("grade " + count + " ::  " + gradeArray[i] + "\n");
+			count++;
 		}
 		output += "\n" + getAverage(); 
 		return output; 
