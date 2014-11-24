@@ -33,6 +33,7 @@ class FileTester
 {
    public static void main( String[] args )
    {	
+	   String name = "";
       try{
     	String content = "This is my content which would be appended " +
         	"at the end of the specified file";
@@ -45,7 +46,7 @@ class FileTester
     	if(!file.exists()){
     	   file.createNewFile();
     	}
-
+    	
     	//Here true is to append the content to file
     	FileWriter fw = new FileWriter(file,true);
     	//BufferedWriter writer give better performance
