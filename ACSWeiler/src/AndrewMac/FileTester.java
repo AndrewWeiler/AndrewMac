@@ -30,9 +30,36 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 
 class FileTester
-{
-   public static void main( String[] args )
-   {	
+{ private String account;
+
+   public FileTester(String data){
+	   account = data;
+	   
+   }
+ 
+   
+   
+   
+   
+   
+   
+}
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   /* {	
 	   String name = "";
       try{
     	String content = "This is my content which would be appended " +
@@ -40,9 +67,9 @@ class FileTester
         //Specify the file name and path here
     	File file =new File("writeData/userInfo.txt");
 
-    	/* This logic is to create the file if the
+    	 This logic is to create the file if the
     	 * file is not already present
-    	 */
+    	 
     	if(!file.exists()){
     	   file.createNewFile();
     	}
@@ -62,4 +89,4 @@ class FileTester
     	 ioe.printStackTrace();
        }
    }
-}
+}*/
