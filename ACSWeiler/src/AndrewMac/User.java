@@ -3,10 +3,11 @@ package AndrewMac;
 import static java.lang.System.*;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class User {
-	public static void main( String args[] ){	
+	public static void main( String args[] ) throws IOException{	
 
 	Scanner scan = new Scanner(System.in);
 	DataReader myDataReader = new DataReader();
@@ -20,6 +21,7 @@ public class User {
 				String password = scan.nextLine();
 				SignIn account = new SignIn(username, password);
 				account.addAccount();//adds a new account if one doesn't exist
+				account.Count();
 			}
 			else
 				{System.out.println("Please enter a username: ");
@@ -27,13 +29,11 @@ public class User {
 				System.out.println("Please enter a password: ");
 					String password = scan.nextLine();	
 					SignIn account = new SignIn(username, password);
-						myDataReader.returnData("writeData/userInfo.txt");
-
-							SignIn test = new SignIn(data); //reads in from the userInfo data file
-							account.checkAccount(data); //checks to see if one exists
-
+					out.println(myDataReader.returnData("writeData/userInfo.txt"));
+							out.println(account.checkAccount(myDataReader.returnData("writeData/userInfo.txt"))); //checks to see if one exists
+						
 
 		}
 
 }
-}}
+}
