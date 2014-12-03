@@ -21,7 +21,7 @@ public class User {
 				String password = scan.nextLine();
 				SignIn account = new SignIn(username, password);
 				account.addAccount();//adds a new account if one doesn't exist
-				account.Count();
+				
 			}
 			else
 				{System.out.println("Please enter a username: ");
@@ -29,7 +29,7 @@ public class User {
 				System.out.println("Please enter a password: ");
 					String password = scan.nextLine();	
 					SignIn account = new SignIn(username, password);
-					out.println(myDataReader.returnData("writeData/userInfo.txt"));
+					//out.println(myDataReader.returnData("writeData/userInfo.txt"));
 							out.println(account.checkAccount(myDataReader.returnData("writeData/userInfo.txt"))); //checks to see if one exists
 						
 

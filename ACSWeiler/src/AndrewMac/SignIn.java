@@ -34,12 +34,12 @@ String password;
 	    	FileWriter fw = new FileWriter(file,true);
 	    	//BufferedWriter writer give better performance
 	    	BufferedWriter bw = new BufferedWriter(fw);
-	    	bw.write(username + "\n" );
+	    	bw.write(username + " ");
 	    	bw.write(password+"\n" );
 	    	//Closing BufferedWriter Stream
 	    	bw.close();
 
-		System.out.println("Data successfully appended at the end of file");
+		System.out.println("Your account has been created.");
 
 	      }catch(IOException ioe){
 	         System.out.println("Exception occurred:");
@@ -47,46 +47,20 @@ String password;
 	       	
 	      }
 	
-	public void Count(){
-		try{
-			  
-		String content = "This is my content which would be appended " +
-	        	"at the end of the specified file";
-	        //Specify the file name and path here
-	    	File file = new File("writeData/accountCount.txt");
 
-	    	/* This logic is to create the file if the
-	    	 * file is not already present
-	    	 */
-	    	if(!file.exists()){
-	    	   file.createNewFile();
-	    	}
-	    	
-	    	//Here true is to append the content to file
-	    	FileWriter fw = new FileWriter(file,true);
-	    	//BufferedWriter writer give better performance
-	    	BufferedWriter bw = new BufferedWriter(fw);
-	    	bw.write("2");
-	    	//Closing BufferedWriter Stream
-	    	bw.close();
-
-		System.out.println("Data successfully appended at the end of file");
-
-	      }catch(IOException ioe){
-	         System.out.println("Exception occurred:");
-	    	 ioe.printStackTrace(); }
-	       
-	      }
-	public boolean checkAccount(String data) {
+	public String checkAccount(String data) {
+		String result = "Sorry, there is no account under that name." + "\n" + "Please create a new account.";
 		Scanner scan = new Scanner(data);
-		String account = username + password;
+		String loc = "";
 		while(scan.hasNext()){
-			if(account.equals(scan.nextLine()))
-				return true;
+			loc = scan.next();
+			
+			if((username.compareTo(loc)==0))
+				result = "You are signed in.";
 			
 		}
-		return false;
 		
+		return result;
 	}
   	
 		      
