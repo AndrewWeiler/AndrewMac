@@ -37,8 +37,17 @@ public class User {
 					String password = scan.nextLine();	
 					SignIn account = new SignIn(username, password);
 				out.println(account.checkAccount(myDataReader.returnData("writeData/userInfo.txt"))); //checks to see if account exists
-				
-
+				System.out.println("What would you like to do? ( / / / / / )");
+				String loc = scan.nextLine();
+				if(loc.equalsIgnoreCase("")){
+					
+				}
+				if(loc.equalsIgnoreCase("")){
+					
+				}
+				if(loc.equalsIgnoreCase("")){
+	
+				}
 		}
 		
 

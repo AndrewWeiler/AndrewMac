@@ -99,8 +99,7 @@ String password;
 	public String checkAccount(String data){//returns if the password at that index match the username
 		String result = "Sorry, there is no account under that name." + "\n" + "Please create a new account.";
 		if((checkUsername(data))&&(checkPassword(data)))
-			result = ("You are signed in. What would you like to do now?" + "\n" + ""
-		);
+			result = ("You are signed in.");
 		
 	return result;
 		
