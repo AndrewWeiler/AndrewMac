@@ -46,6 +46,7 @@ public class Number
 		return (number==count);
 	}
 
+
 	public String toString( )
 	{
 		return ""+number;

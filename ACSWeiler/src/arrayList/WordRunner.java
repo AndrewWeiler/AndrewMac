@@ -11,5 +11,7 @@ public class WordRunner
 {
 	public static void main(String[] args)
 	{
+		Word test = new Word("chicken");
+		out.println(test);
 	}
 }
